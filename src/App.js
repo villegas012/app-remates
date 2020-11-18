@@ -1,8 +1,10 @@
 import './App.css';
 import Home from './componentes/home/Home';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
-import Productos from './componentes/productos/Productos';
 import Producto from './componentes/productos/Producto';
+import CatalogoProducto from './componentes/productos/CatalogoProducto';
+
+
 
 
 function App() {
@@ -16,7 +18,7 @@ function App() {
       />
       <Route
         exact path='/productos'
-        render={() => <Productos />
+        render={() => <CatalogoProducto />
         }
       />
 

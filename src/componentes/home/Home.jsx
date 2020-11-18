@@ -9,6 +9,9 @@ import { useHistory } from 'react-router-dom';
 export default function Home() {
 
     const style1 = { display: 'flex', justifyContent: 'center'};
+    const styleDiv = { display: 'flex', justifyContent: 'center', marginTop: '40px' };
+
+
     const history = useHistory()
 
 
@@ -37,22 +40,19 @@ export default function Home() {
             </Row>
             <Row className='bodyHome'>
                 <Col style={style1}>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
+                    <div style={styleDiv}>
                         <SearchBar />
                     </div>
                 </Col>  
             </Row>
             <Row>
             <Col style={style1}>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
-                        <img src={fondo} style={{width:'50%'}}></img>
+                    <div style={styleDiv}>
+                        <img src={fondo} style={{width:'45%'}}></img>
                     </div>
                 </Col>
             </Row>
         </div>
-
-
-
     )
 }
 
