@@ -1,8 +1,8 @@
 import './App.css';
 import Home from './componentes/home/Home';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
-import Productos from './componentes/productos/Productos';
-import Producto from './componentes/productos/Producto';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Remate from './componentes/productos/Remate';
+import CatalogoRemate from './componentes/productos/CatalogoRemate';
 
 
 function App() {
@@ -15,14 +15,14 @@ function App() {
 
       />
       <Route
-        exact path='/productos'
-        render={() => <Productos />
+        exact path='/catalogo'
+        render={() => <CatalogoRemate />
         }
       />
 
       <Route
-        exact path='/productos/:id'
-        render={() => <Producto />
+        exact path='/catalogo/:id'
+        render={() => <Remate />
         }
       />
 

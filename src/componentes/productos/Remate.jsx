@@ -2,40 +2,33 @@ import React from 'react';
 import { Container, Row, Col, Image, Button, InputGroup, FormControl } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import fondo from '../../imagenes/fondo.jpg'
+import NavBar from '../navBar/NavBar';
 
 
 
-export default function Productos() {
+export default function Remate() {
     const history = useHistory();
     const styleCol = { margin: '0 10px 5px 0px' };
-    const styleContainer = { marginTop: '50px' };
-    const style1 = { display: 'flex', justifyContent: 'center', marginTop: '50px' };
-    const styleRow = { marginTop: '20px'};
+    const styleContainer = { marginTop: '50px' };    
+    const styleRow = { marginTop: '20px' };
+    const styleH1 = { margin: '10px', fontSize: '80px', textAlign: 'center' };
 
-
-    const handleClick = (e) => {
+/*     const handleClick = (e) => {
         e.preventDefault();
-        if(e.target.value === 'regresar'){
+        if (e.target.value === 'regresar') {
             history.push(`/productos`);
         }
-        
+    } */
 
-    }
+
     return (
         <div>
-            <Container style={styleContainer}>
-                <Row>
-                    <Col sm={7} style={styleCol}>
-                        <Button value='regresar' onClick={handleClick}>Regresar</Button>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col sm={4}>
-                        <h1 style={style1}>Articulo #: Dato</h1>
-                    </Col>
-                </Row>
-            </Container>
-
+            <h1 style={styleH1}>Remate Nro: Dato</h1>
+            <Row>
+                <Col>
+                    <NavBar />
+                </Col>
+            </Row>
             <Container style={styleContainer}>
                 <Row>
                     <Col sm={4} style={styleCol}>
@@ -55,7 +48,7 @@ export default function Productos() {
                                 <h5>Fecha inicial: Dato</h5>
                             </Col>
                             <Col sm={4} style={{ backgroundColor: 'yellow' }}>
-                                <h5>Precio base: Dato</h5>
+                                <h5>Precio inicial: Dato</h5>
                             </Col>
                             <Col style={{ backgroundColor: 'grey' }}>
                                 <h5>Estado: Dato</h5>
