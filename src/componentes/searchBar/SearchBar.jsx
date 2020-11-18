@@ -1,11 +1,13 @@
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import { Button, Form, FormControl } from 'react-bootstrap';
 
-export default function SearchBar(){
+export default function SearchBar() {
     return (
         <div>
-            <input type="text"/>
-            <Button style={{marginLeft:'10px'}}>Buscar</Button>
+            <Form inline>
+                <FormControl style={{ width: '550px', height: '40px' }} type="text" placeholder="Busca tu producto" className="mr-sm-2" />
+                <Button style={{height: '40px' }}>Buscar</Button>
+            </Form>
         </div>
-        )
+    )
 }
