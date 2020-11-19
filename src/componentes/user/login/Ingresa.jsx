@@ -16,7 +16,7 @@ export default function Ingresa() {
             history.push(`/`);
         }
         if(e.target.value === 'Entro'){
-            history.push(`/dashboardUser`);
+            history.push(`/user/:id`);
         } 
             
     }
