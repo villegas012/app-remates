@@ -10,7 +10,7 @@ export default function NavBar() {
 
     const style1 = { display: 'flex', justifyContent: 'center' };
     const styleDiv = { display: 'flex', justifyContent: 'center', marginTop: '20px' };
-    const styleRowBotton = { margin: '20px 0px 0px 30px' };
+    
     
 
     const handleClick = (e) => {
@@ -20,6 +20,12 @@ export default function NavBar() {
         }
         if (e.target.value === 'Home') {
             history.push(`/`)
+        }
+        if (e.target.value === 'Ingresa') {
+            history.push(`/ingresa`)
+        }
+        if (e.target.value === 'Registrate') {
+            history.push(`/registrate`)
         }
     }
 
@@ -33,8 +39,8 @@ export default function NavBar() {
                             <Button value='Home' onClick={handleClick}>Home</Button>
                             <Button value='Productos' onClick={handleClick}>Productos</Button>
                             <Dropdown.Item>Categorias</Dropdown.Item>
-                            <Button value='Ingresa'>Ingresa</Button>
-                            <Button value='Registrate'>Registrate</Button>
+                            <Button value='Ingresa' onClick={handleClick}>Ingresa</Button>
+                            <Button value='Registrate' onClick={handleClick}>Registrate</Button>
                         </ButtonGroup>
                     </div>
                 </Col>

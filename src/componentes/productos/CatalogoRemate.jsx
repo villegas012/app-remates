@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
+import { Row, Col, Card, ListGroup, ListGroupItem, Button, Container } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import fondo from '../../imagenes/fondo.jpg'
 import NavBar from '../navBar/NavBar';
@@ -17,7 +17,7 @@ export default function CatalogoRemate() {
         if (e.target.value === 'regresar') {
             history.push(`/`);
         }
-        if(e.target.value === 'puja'){
+        if(e.target.value === 'verMas'){
             history.push(`/catalogo/1`);
         }
     }
@@ -30,6 +30,7 @@ export default function CatalogoRemate() {
                     <NavBar />
                 </Col>
             </Row>
+            <Container>
             <Row>
                 {/* Inicia map */}
                 <Col style={style1}>
@@ -43,12 +44,13 @@ export default function CatalogoRemate() {
                             <ListGroupItem>Fecha de terminacion: Dato</ListGroupItem>
                         </ListGroup>
                         <Card.Body>
-                            <Button value='puja' onClick={handleClick}>Realizar puja</Button>
+                            <Button value='verMas' onClick={handleClick}>Ver mas</Button>
                         </Card.Body>
                     </Card>
                 </Col>
                 {/* Termina map */}
             </Row>
+            </Container>
         </div>
     )
 }

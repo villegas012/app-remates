@@ -5,7 +5,7 @@ export default function SearchBar() {
     return (
         <div>
             <Form inline>
-                <FormControl style={{ width: '550px', height: '40px' }} type="text" placeholder="Busca tu producto" className="mr-sm-2" />
+                <FormControl style={{ width: '700px', height: '40px' }} type="text" placeholder="Busca tu producto" className="mr-sm-2" />
                 <Button style={{height: '40px' }}>Buscar</Button>
             </Form>
         </div>
