@@ -1,24 +1,16 @@
 import React from 'react';
 import { Container, Row, Col, Image, Button, InputGroup, FormControl } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
 import fondo from '../../imagenes/fondo.jpg'
 import NavBar from '../navBar/NavBar';
 
 
 
 export default function Remate() {
-    const history = useHistory();
+    
     const styleCol = { margin: '0 10px 5px 0px' };
     const styleContainer = { marginTop: '50px' };    
     const styleRow = { marginTop: '20px' };
     const styleH1 = { margin: '10px', fontSize: '80px', textAlign: 'center' };
-
-/*     const handleClick = (e) => {
-        e.preventDefault();
-        if (e.target.value === 'regresar') {
-            history.push(`/productos`);
-        }
-    } */
 
 
     return (
@@ -54,7 +46,7 @@ export default function Remate() {
                                 <h5>Estado: Dato</h5>
                             </Col>
                         </Row>
-                        <Row style={styleRow}>
+                        <Row style={{width:'300px', marginTop:'20px'}}>
                             <InputGroup className="mb-3">
                                 <FormControl
                                     placeholder="Realizar nueva oferta"
